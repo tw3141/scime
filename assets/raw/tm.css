@@ -872,6 +872,65 @@
   .shrrtimg:hover {
     background: white url('/img/shr.png') no-repeat -28px -20px !important
   }
+  .rshr {
+    font-size: 1em;
+    position: absolute;
+    left: 100%;
+    margin-top: -0.5em;
+    margin-left: 4px;
+    z-index: 50;
+    text-indent: 0;
+    width: 122px;
+    border: 1px solid #ccc;
+    padding: 6px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    background-image: -webkit-linear-gradient(top, #fff, #eee);
+    background-image: -moz-linear-gradient(top, #fff, #eee);
+    background-image: -o-linear-gradient(top, #fff, #eee);
+    background-image: -linear-gradient(top, #fff, #eee);
+    text-align: right;
+    display: none
+  }
+  .rshr:before {
+    position: absolute;
+    display: inline-block;
+    border-top: 6px solid transparent;
+    border-right: 6px solid red;
+    border-bottom: 6px solid transparent;
+    border-right-color: #ccc;
+    left: -6px;
+    top: 10px;
+    content: ''
+  }
+  .rshr:after {
+    position: absolute;
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-right: 5px solid #fbfbfb;
+    border-bottom: 5px solid transparent;
+    left: -5px;
+    top: 11px;
+    content: ''
+  }
+  .rshr a:hover {
+    text-decoration: none
+  }
+  #river_timeline table,
+  #river_timeline table td {
+    position: relative
+  }
+  #river_sponsors_hiring {
+    position: relative !important;
+    z-index: 0
+  }
+  #river_timeline .itc1 {
+    position: relative !important
+  }
+  #river_timeline #newpostscounter {
+    margin-right: 0 !important
+  }
   #newpostscounter {
     display: none;
     z-index: 0;
@@ -921,70 +980,5 @@
     -webkit-transition-duration: 0s !important;
     -moz-transition-duration: 0s !important;
     -o-transition-duration: 0s !important
-  }
-  .ditemblock {
-    position: relative
-  }
-  .ditemexcerptcontainer {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 1em;
-    padding-top: 5px;
-    z-index: 100;
-    width: 225px
-  }
-  .ditemexcerpt {
-    display: block;
-    padding: 9px 11px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    background-color: white
-  }
-  .ditemexcerpt cite {
-    display: block;
-    padding-bottom: 3px
-  }
-  .ditemexcerpt .excerpt {
-    display: block;
-    padding-bottom: 3px;
-    word-wrap: break-word
-  }
-  .intents {
-    margin-top: 8px;
-    width: 100%;
-    border-top: 1px solid #ccc
-  }
-  .intent {
-    padding-top: 6px
-  }
-  .intent a {
-    display: block
-  }
-  .intent a:hover {
-    text-decoration: none;
-    background-color: transparent
-  }
-  .intent a:hover .reply {
-    background: url('/img/new_twitter_sprites.png') no-repeat -32px -21px
-  }
-  .intent a:hover .retweet {
-    background: url('/img/new_twitter_sprites.png') no-repeat -16px -21px
-  }
-  .intent a:hover .favorite {
-    background: url('/img/new_twitter_sprites.png') no-repeat 0 -21px
-  }
-  .reply {
-    background: url('/img/new_twitter_sprites.png') no-repeat -32px 0;
-    width: 16px
-  }
-  .retweet {
-    background: url('/img/new_twitter_sprites.png') no-repeat -16px 0;
-    width: 16px
-  }
-  .favorite {
-    background: url('/img/new_twitter_sprites.png') no-repeat 0 0;
-    width: 16px
   }
 </style>
