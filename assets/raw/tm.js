@@ -253,9 +253,9 @@
       document.getElementById(cnum + 'i' + 1).scrollIntoView();
     }
   }
-  var baseFeedTime = 1480270506000;
-  var pgrdad = 'November 27, 2016, 1:15 PM';
-  var m2_ead = '161127/h1315';
+  var baseFeedTime = 1480285210000;
+  var pgrdad = 'November 27, 2016, 5:20 PM';
+  var m2_ead = '161127/h1720';
   var curr_yy = 16;
   var min_mod = 5;
   var lb_ead = '161127';
@@ -620,6 +620,46 @@
         '<a href="https://twitter.com/intent/retweet?tweet_id=' + tweetId + '&related=mediagazer"><span class="shrrtimg">&nbsp;</span></a>' +
         '</span>';
   }
+
+  function overRiverItem(itemId, turnOn, e) {
+    if (iPadiPhone() && e && (e.target.tagName == "A"))
+      return;
+    if (turnOn)
+      shareOn('s' + itemId);
+    else
+      shareOff('s' + itemId);
+  }
+
+  function installRiverShareHandlers() {
+    function handler(itemId, turnOn) {
+      return function(e) {
+        if (!e) var e = window.event;
+        overRiverItem(itemId, turnOn, e);
+      };
+    }
+    if (!document.getElementsByClassName) // IE
+      var items = customGetElementsByClassName('ritem');
+    else
+      var items = document.getElementsByClassName('ritem');
+    for (var i = 0; i < items.length; i++) {
+      if (!items[i].getElementsByClassName) // IE
+        var id = customGetElementsByClassName('rshr', items[i])[0].getAttribute('id').split('s');
+      else
+        var id = items[i].getElementsByClassName('rshr')[0].getAttribute('id').split('s');
+      items[i].onmouseover = handler(id[1], true);
+      items[i].onmouseout = handler(id[1], false);
+    }
+  }
+
+  function customGetElementsByClassName(className, parent) {
+    var results = [];
+    var classNameExp = new RegExp('\\b' + className + '\\b');
+    var pageElements = (parent ? parent : document).getElementsByTagName('*');
+    for (var i = 0; i < pageElements.length; i++)
+      if (classNameExp.test(pageElements[i].className))
+        results.push(pageElements[i]);
+    return results;
+  }
   var NTptpssd = 40 * 1000;
   var NTpsl = 3 * 60 * 1000 + 30 * 1000;
   var NTppds = 30 * 1000;
@@ -811,122 +851,6 @@
       }
     }
   }
-  // hover js
-  function phoneOrTablet() {
-    return navigator.userAgent.match(/phone|droid|palm|webos|pocket|symbian|ipad|windows.*nt.*touch/i);
-  }
-  var showExcerptTimer;
-  var showExcerptIn = 400; // ms
-  var noDelayInShowingExcerpt = false;
-  var turnOnExcerptDelayTimer;
-  var turnOnExcerptDelayIn = 500; // ms
-  function initDiscussionExcerptBlocks() {
-    var items = document.getElementsByClassName('item');
-    for (i = 0; i < items.length; i++)
-      if (items[i].id) {
-        var itemId = items[i].id.split('i');
-        var unexpandedDiscussionBlock = document.getElementById(itemId[0] + 'd' + itemId[1]);
-        var expandedDiscussionBlock = document.getElementById(itemId[0] + 'p' + itemId[1]);
-        if (unexpandedDiscussionBlock && expandedDiscussionBlock) {
-          var blss = unexpandedDiscussionBlock.getElementsByClassName('bls');
-          var dbpts = expandedDiscussionBlock.getElementsByClassName('dbpt'); // should have the same length as blss
-          for (j = 0; j < blss.length; j++) {
-            dLinks = blss[j].getElementsByTagName('A');
-            dExcerpts = dbpts[j].getElementsByClassName('di'); // should be of the same length as dLinks
-            for (k = 0; k < dLinks.length; k++) {
-              var dExcerptId = items[i].id + 'd' + j + 'e' + k;
-              dExcerpts[k].id = dExcerptId;
-              var span = document.createElement('span');
-              span.id = dExcerptId + 'db';
-              span.className = 'ditemblock';
-              span.onmouseover = getDLinkMouseOverHandler(dExcerptId); // not using addEventListener, for compatibility w/ IE8
-              span.onmouseout = getDLinkMouseOutHandler(dExcerptId);
-              blss[j].insertBefore(span, dLinks[k]);
-              span.appendChild(dLinks[k]);
-            }
-          }
-        }
-      }
-  }
-
-  function getDLinkMouseOverHandler(excerptId) {
-    return function() {
-      if (noDelayInShowingExcerpt) {
-        if (turnOnExcerptDelayTimer)
-          clearTimeout(turnOnExcerptDelayTimer);
-        showDiscussionExcerpt(excerptId);
-      } else
-        showExcerptTimer = setTimeout(function() {
-          showDiscussionExcerpt(excerptId);
-          if (turnOnExcerptDelayTimer)
-            clearTimeout(turnOnExcerptDelayTimer);
-          noDelayInShowingExcerpt = true;
-        }, showExcerptIn);
-    }
-  }
-
-  function getDLinkMouseOutHandler(excerptId) {
-    return function() {
-      if (showExcerptTimer)
-        clearTimeout(showExcerptTimer);
-      hideDiscussionExcerpt(excerptId);
-      if (noDelayInShowingExcerpt) {
-        if (turnOnExcerptDelayTimer)
-          clearTimeout(turnOnExcerptDelayTimer);
-        turnOnExcerptDelayTimer = setTimeout(function() {
-          noDelayInShowingExcerpt = false;
-        }, turnOnExcerptDelayIn);
-      }
-    }
-  }
-
-  function showDiscussionExcerpt(excerptId) {
-    discussionBlock = document.getElementById(excerptId + 'db');
-    var bubble = document.getElementById(excerptId + 'b');
-    if (!bubble) {
-      bubble = document.createElement('span');
-      bubble.id = excerptId + 'b';
-      bubble.className = 'ditemexcerptcontainer';
-      bubble.innerHTML = getDiscussionExcerptHtml(excerptId);
-      discussionBlock.appendChild(bubble);
-    }
-    bubble.style.display = 'block';
-  }
-
-  function getDiscussionExcerptHtml(excerptId) {
-    var html = '<span class="ditemexcerpt">';
-    var excerpt = document.getElementById(excerptId);
-    var citation = excerpt.getElementsByTagName('cite')[0].innerHTML;
-    var as = excerpt.getElementsByTagName('a');
-    var a = as[as.length - 1];
-    html += '<cite>' + citation + '</cite>' +
-      '<span class="excerpt">' + a.innerHTML + '</span>';
-    var tweetId = getTweetId(a.href);
-    if (tweetId)
-      html += getIntentsHtml(tweetId);
-    html += '</span>';
-    return html;
-  }
-
-  function getTweetId(str) {
-    var tweetUrlPattern = /^http:\/\/twitter.com\/.+\/status\/(\d+)$/i
-    var match = tweetUrlPattern.exec(str);
-    return match != null ? match[1] : null;
-  }
-
-  function getIntentsHtml(tweetId) {
-    return '<table class="intents"><tr>' +
-      '<td class="intent" align="center"><a href="https://twitter.com/intent/tweet?in_reply_to=' + tweetId + '"><div class="reply">&nbsp;</div></a></td>' +
-      '<td class="intent" align="center"><a href="https://twitter.com/intent/retweet?tweet_id=' + tweetId + '"><div class="retweet">&nbsp;</div></a></td>' +
-      '<td class="intent" align="center"><a href="https://twitter.com/intent/favorite?tweet_id=' + tweetId + '"><div class="favorite">&nbsp;</div></a></td>' +
-      '</tr></table>';
-  }
-
-  function hideDiscussionExcerpt(excerptId) {
-    var bubble = document.getElementById(excerptId + 'b');
-    if (bubble)
-      bubble.style.display = 'none';
-  }
 
   function init_all() {
     cmplu();
@@ -937,9 +861,8 @@
     hhash();
     TiLTT();
     setTimeout("TeD()", TwTSE);
-    if (iPadiPhone()) replaceShareHandlers();
+    installRiverShareHandlers();
     NTiD3t();
-    if (!phoneOrTablet()) initDiscussionExcerptBlocks();
   }
   // -->
 </script>
