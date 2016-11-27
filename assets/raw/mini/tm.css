@@ -1,0 +1,66 @@
+<style type="text/css" media="all">
+  h1 {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.2em 0;
+    text-align: right;
+    color: #244
+  }
+  .mini_item {
+    padding: 0.2em 0
+  }
+  .mini_attrib {
+    color: #577
+  }
+  .mini_ago {
+    font-style: italic;
+    color: #887
+  }
+  .mini_lead_head {
+    font-size: 1.2em;
+    font-weight: bold
+  }
+  .mini_relbox {
+    padding: 0 0 0.1em 0.3em;
+    border-left: solid 0.3em #acc
+  }
+  .mini_relhed {
+    color: #462
+  }
+  .mini_clu {
+    padding: 0.1em 0
+  }
+  .mini_tal {
+    text-align: right
+  }
+  .mini_secbox {
+    margin: 0.6em 0 0.2em;
+    background-color: #688;
+    text-align: right;
+    padding: 0 0.5em;
+    border-bottom: solid 1px #799
+  }
+  .mini_secboxhed {
+    background-color: #466;
+    padding: 0 0.3em;
+    border-top: solid 0.2em #466;
+    font-weight: normal;
+    color: #fff;
+    text-transform: uppercase;
+    border-left: solid 1px #577;
+    border-bottom: solid 1px #688;
+  }
+  body {
+    font-family: arial;
+    font-size: 0.80em;
+    color: #333;
+    border-top: solid #466 0.3em;
+    border-bottom: solid #466 1em;
+    margin: 0 1px
+  }
+  p {
+    padding: 0;
+    margin: 0.2em 0
+  }
+</style>
