@@ -253,7 +253,7 @@
       document.getElementById(cnum + 'i' + 1).scrollIntoView();
     }
   }
-  var pgrdad = 'November 27, 2016, 5:25 PM';
+  var pgrdad = '(none)';
   var m2_ead = '161127/h1725';
   var curr_yy = 16;
   var min_mod = 5;
@@ -345,7 +345,7 @@
     }
   }
   var arrt = 'http://www.techmeme.com/';
-  var nowrd = 'November 27, 2016';
+  var nowrd = '(none)';
   var lb_sad_d = 'September 30, 2007';
   var lb_sad = '070930';
 
