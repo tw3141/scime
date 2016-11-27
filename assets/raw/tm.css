@@ -163,12 +163,12 @@
     font-weight: bold
   }
   body {
-    margin: 0 auto 0 auto;
-    max-width: 84em;
-    min-width: 61em;
+    margin: 0 auto 2em auto;
+    padding: 0 1em;
+    max-width: 56em;
+    min-width: 38em;
     font-size: 0.89em;
-    line-height: 120%;
-    background: #fff
+    line-height: 140%;
   }
   .pagecont {
     margin-bottom: 2.5em;
