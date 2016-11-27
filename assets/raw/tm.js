@@ -253,9 +253,8 @@
       document.getElementById(cnum + 'i' + 1).scrollIntoView();
     }
   }
-  var baseFeedTime = 1480285210000;
-  var pgrdad = 'November 27, 2016, 5:20 PM';
-  var m2_ead = '161127/h1720';
+  var pgrdad = 'November 27, 2016, 5:25 PM';
+  var m2_ead = '161127/h1725';
   var curr_yy = 16;
   var min_mod = 5;
   var lb_ead = '161127';
@@ -346,7 +345,7 @@
     }
   }
   var arrt = 'http://www.techmeme.com/';
-  var nowrd = '(none)';
+  var nowrd = 'November 27, 2016';
   var lb_sad_d = 'September 30, 2007';
   var lb_sad = '070930';
 
@@ -620,46 +619,6 @@
         '<a href="https://twitter.com/intent/retweet?tweet_id=' + tweetId + '&related=mediagazer"><span class="shrrtimg">&nbsp;</span></a>' +
         '</span>';
   }
-
-  function overRiverItem(itemId, turnOn, e) {
-    if (iPadiPhone() && e && (e.target.tagName == "A"))
-      return;
-    if (turnOn)
-      shareOn('s' + itemId);
-    else
-      shareOff('s' + itemId);
-  }
-
-  function installRiverShareHandlers() {
-    function handler(itemId, turnOn) {
-      return function(e) {
-        if (!e) var e = window.event;
-        overRiverItem(itemId, turnOn, e);
-      };
-    }
-    if (!document.getElementsByClassName) // IE
-      var items = customGetElementsByClassName('ritem');
-    else
-      var items = document.getElementsByClassName('ritem');
-    for (var i = 0; i < items.length; i++) {
-      if (!items[i].getElementsByClassName) // IE
-        var id = customGetElementsByClassName('rshr', items[i])[0].getAttribute('id').split('s');
-      else
-        var id = items[i].getElementsByClassName('rshr')[0].getAttribute('id').split('s');
-      items[i].onmouseover = handler(id[1], true);
-      items[i].onmouseout = handler(id[1], false);
-    }
-  }
-
-  function customGetElementsByClassName(className, parent) {
-    var results = [];
-    var classNameExp = new RegExp('\\b' + className + '\\b');
-    var pageElements = (parent ? parent : document).getElementsByTagName('*');
-    for (var i = 0; i < pageElements.length; i++)
-      if (classNameExp.test(pageElements[i].className))
-        results.push(pageElements[i]);
-    return results;
-  }
   var NTptpssd = 40 * 1000;
   var NTpsl = 3 * 60 * 1000 + 30 * 1000;
   var NTppds = 30 * 1000;
@@ -861,7 +820,6 @@
     hhash();
     TiLTT();
     setTimeout("TeD()", TwTSE);
-    installRiverShareHandlers();
     NTiD3t();
   }
   // -->
