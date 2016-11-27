@@ -1,9 +1,4 @@
 <style type="text/css" media="all">
-  /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-  
   html,
   body,
   div,
@@ -90,10 +85,8 @@
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: baseline;
+    vertical-align: baseline
   }
-  /* HTML5 display-role reset for older browsers */
-  
   article,
   aside,
   details,
@@ -105,39 +98,37 @@
   menu,
   nav,
   section {
-    display: block;
+    display: block
   }
   body {
-    line-height: 1;
+    line-height: 1
   }
   ol,
   ul {
-    list-style: none;
+    list-style: none
   }
   blockquote,
   q {
-    quotes: none;
+    quotes: none
   }
   blockquote:before,
   blockquote:after,
   q:before,
   q:after {
     content: '';
-    content: none;
+    content: none
   }
   table {
     border-collapse: collapse;
-    border-spacing: 0;
+    border-spacing: 0
   }
   input,
   select,
   textarea {
     font: inherit;
   }
-  /* end css reset */
-  
   body {
-    font-family: Optima, "Microsoft Sans Serif", sans-serif;
+    font-family: Optima, "Microsoft Sans Serif", sans-serif
   }
   .ii strong {
     font-family: Optima, "Trebuchet MS", sans-serif;
@@ -158,30 +149,26 @@
     font-family: Optima, "Century Gothic", sans-serif;
   }
   H2 {
-    font-family: Optima, "Trebuchet MS", sans-serif;
+    font-family: Optima, "Century Gothic", sans-serif;
   }
   H3 {
-    font-family: Optima, "Trebuchet MS", sans-serif;
+    font-family: Optima, "Century Gothic", sans-serif;
+  }
+  H3 .def {
+    font-weight: normal;
+    font-size: 0.8em;
+    padding-left: 0.4em;
   }
   b {
     font-weight: bold
-  }
-  i {
-    font-style: italic
   }
   body {
     margin: 0 auto 0 auto;
     max-width: 84em;
     min-width: 61em;
-    font-size: 0.89em
-  }
-  /* max-width was 76em */
-  
-  body {
-    line-height: 130%;
-  }
-  body .item {
-    line-height: 140%;
+    font-size: 0.89em;
+    line-height: 120%;
+    background: #fff
   }
   .pagecont {
     margin-bottom: 2.5em;
@@ -203,8 +190,14 @@
     position: relative;
     z-index: 10;
   }
+  .item .di A {
+    font-size: 1.1em
+  }
+  .item .di CITE A {
+    font-size: 1.00em
+  }
   .item .di CITE {
-    font-size: 0.93em
+    font-size: 1.00em
   }
   .item CITE {
     font-size: 1em
@@ -213,28 +206,16 @@
     font-size: 0.93em
   }
   .ed STRONG A:link {
-    color: #004068;
+    color: #004860;
   }
   .ed STRONG A:visited {
-    color: #804068;
-  }
-  .ed .maincol .item A:link {
-    color: #003890;
-  }
-  .ed .maincol .item A:visited {
-    color: #703690;
-  }
-  .ed .maincol .item A.nvc:visited {
-    color: #003890;
+    color: #a04860;
   }
   .ed A:link {
-    color: #003860;
+    color: #002848;
   }
   .ed A:visited {
-    color: #703660;
-  }
-  .ed A.nvc:visited {
-    color: #003860;
+    color: #902050;
   }
   .ed A:hover {
     text-decoration: underline;
@@ -245,49 +226,43 @@
     font-style: normal;
   }
   .ed CITE {
-    color: #707080;
+    color: #686860;
   }
   .ed CITE A:link {
-    color: #707080;
+    color: #686860;
   }
   .ed CITE A:visited {
-    color: #707080;
+    color: #686860;
   }
   .cnvl {
     text-align: center;
   }
   .ed .cnvl A:visited {
-    color: #003860;
-  }
-  H3 {
-    font-weight: bold;
-    color: #455;
-    font-size: 1.15em;
-    padding: 0.4em 0 0.2em;
+    color: #002848;
   }
   H2 {
     font-weight: bold;
     color: #455;
-    font-size: 1.3em;
-    padding: 0.7em 0 0.4em;
+    font-size: 1.4em;
+    padding: 0.7em 0 0.6em;
+  }
+  H3 {
+    font-weight: bold;
+    color: #455;
+    font-size: 1.25em;
+    padding: 0.7em 0 0.2em;
   }
   #topcol1 H2 {
-    padding-left: 1.55em;
+    padding-left: 1.45em;
   }
-  /* to compensate for itc1 */
-  
   #botcol1 H2 {
-    padding-left: 1.55em;
+    padding-left: 1.45em;
   }
-  /* to compensate for itc1 */
-  
   #botcol2 H2 {
-    padding-left: 1.55em;
+    padding-left: 1.45em;
   }
-  /* to compensate for itc1 */
-  
   .drhed {
-    color: #306038;
+    color: #306830;
     font-weight: bold;
     padding-right: 0.3em;
   }
@@ -310,6 +285,15 @@
     border-bottom: solid 1px #945;
     letter-spacing: 1px
   }
+  .bls {
+    margin-left: -0.1em
+  }
+  .bls A {
+    padding-left: 0.1em
+  }
+  .bls A {
+    padding-right: 0.1em
+  }
   .ago {
     color: #444;
     font-size: 0.9em;
@@ -320,26 +304,35 @@
     margin-right: 1em;
     line-height: 1.2em
   }
-  #topcol3 A:visited {
-    color: #003860;
+  #topcol3 A.nfdl {
+    color: #004860;
   }
   #topcol3 A.nfdl:visited {
-    color: #703660;
+    color: #a04860;
   }
   #topcol3 .fromsis A {
     margin: 0;
   }
   .fromsis {
-    padding: 3em 0
+    padding: 4em 0
+  }
+  #topcol2 H2 {
+    padding-bottom: 0.9em
+  }
+  #topcol3 H2 {
+    padding-bottom: 0.5em;
   }
   #topcol3 .fromsis H2 {
-    padding-bottom: 1.5em;
+    padding-bottom: 1.1em;
   }
   #topcol3 a.f {
     color: #555
   }
   #topcol3 a.f:hover {
     color: #555
+  }
+  #topcol3 .ii {
+    padding-top: 0.5em
   }
   p {
     padding-bottom: 0.7em;
@@ -371,9 +364,12 @@
     letter-spacing: -0.03em;
   }
   .item {
-    padding-top: 0.9em;
-    padding-bottom: 0.9em;
+    padding-top: 0.3em;
+    padding-bottom: 1.0em;
     clear: both;
+  }
+  #topcol3 .item {
+    padding: 0.8em 0;
   }
   .clus {
     padding-bottom: 0.5em;
@@ -387,8 +383,6 @@
     height: 0;
     clear: both;
   }
-  /* to prevent item images from chopping item borders */
-  
   .dbpt {
     padding-top: 0.4em;
   }
@@ -397,6 +391,8 @@
   }
   .di {
     margin-left: 1em;
+    text-indent: -1em;
+    padding-left: 1em
   }
   .last {
     border: none;
@@ -413,26 +409,18 @@
   .prenavbar {
     margin-left: 2em;
   }
-  /* due to itc1 */
-  
   .navbar {
     margin-left: 2em;
   }
-  /* due to itc1 */
-  
   .pagecont {
     margin-right: 2em;
   }
-  /* due to itc1 */
-  
   .itc2 {
     margin-left: -1em;
     padding-left: 1em;
     margin-right: -1em;
     padding-right: 1em;
   }
-  /* to give h() highlights padding, since itc1 is too big, and doing this to item leads to bottom borders too long */
-  
   .ill {
     float: right;
     padding: 0.1em 0 0.5em 0.5em;
@@ -453,11 +441,7 @@
     width: 66%;
     margin-top: 1em;
   }
-  #sponsors {
-    padding: 0 1em 1em;
-    background: #f4f4f4;
-  }
-  #arch {
+  #sponsorposts {
     padding: 0 1em 1em;
     background: #f4f4f4;
   }
@@ -501,12 +485,23 @@
   .rsp .item {
     border: none
   }
+  .itc1 .rsp {
+    margin-bottom: 0.5em;
+  }
+  .rsp .ii {
+    padding-top: 0.5em
+  }
   .rspd {
     color: #777;
     font-weight: bold;
     font-size: 0.9em;
     text-align: right;
     text-transform: uppercase;
+  }
+  .topline {
+    border-bottom: solid 1px #ccc;
+    margin-top: 0.2em;
+    line-height: 1.6em
   }
   .topllinks {
     margin-top: 0em;
@@ -521,6 +516,10 @@
   .toprlinks A {
     padding-left: 1.2em;
   }
+  .fico {
+    float: right;
+    padding: 2px 0 0 4px
+  }
   .toplbut {
     float: left;
     padding-right: 1.2em;
@@ -531,9 +530,14 @@
     padding-left: 1.2em;
     width: 60px;
     height: 30px;
+    text-align: right;
   }
-  /* pixels prevent sliding on Firefox, but ugh, still some rendering issues */
-  
+  .toplelt {
+    float: left;
+  }
+  .toprelt {
+    float: right;
+  }
   .prenavbar A {
     font-size: 0.85em;
     color: #777;
@@ -550,6 +554,14 @@
   .prenavbar A:hover {
     text-decoration: underline;
     color: #000;
+  }
+  .topline img {
+    position: relative;
+    top: 1px
+  }
+  .topline input {
+    position: relative;
+    left: 0.9em
   }
   .navbar {
     background: #174a61;
@@ -585,8 +597,6 @@
   .sisnav {
     float: right;
   }
-  /* background:#465; for contrast with left */
-  
   .sisnav A:link {
     color: #ddd;
   }
@@ -596,8 +606,6 @@
   .sisnav A:hover {
     color: #fff;
   }
-  /* background:#796 for contrast with left */
-  
   .logotab {
     width: 100%;
   }
@@ -608,7 +616,7 @@
     width: 33%
   }
   td.logobox {
-    padding: 3.1em 0 0.7em
+    padding: 0.7em 0
   }
   td.datebox {
     text-align: center;
@@ -640,7 +648,7 @@
     -moz-border-radius: 3px
   }
   #hiring {
-    margin: 6em 0;
+    margin: 5em 0;
     padding: 0.6em 0 0.6em 0.6em;
     border: solid 1px #ccc;
     border-bottom: solid 1px #ccc;
@@ -679,8 +687,6 @@
     text-indent: -1.6em;
     padding-left: 1.6em;
   }
-  /* to make text not wrap:  white-space: nowrap; http://www.quirksmode.org/css/textoverflow.html */
-  
   .dxd {
     position: absolute;
     margin-left: -1.6em
@@ -700,10 +706,10 @@
   }
   .dxcol {
     padding: 7px;
-    background: url(http://www.techmeme.com/img/arrd.png) no-repeat center
+    background: url(/img/arrd.png) no-repeat center
   }
   .dxcol.up {
-    background: url(http://www.techmeme.com/img/arru.png) no-repeat center
+    background: url(/img/arru.png) no-repeat center
   }
   .exm {
     margin-top: 1em;
@@ -721,38 +727,36 @@
   .ed .exm a:hover {
     border-color: #78a
   }
-  /* river and lb */
-  
-  #sponsors .item {
+  #sponsorposts .item {
     border: none;
   }
-  #arch .item {
-    border: none;
-  }
-  /* river */
-  
   #river_timeline {
     float: left;
     width: 67%;
     margin: 1em 1.9% 1em 0;
   }
-  #river_timeline strong {
-    font-size: 1em;
-    padding-left: 0.5em;
+  #river_timeline td {
+    font-size: 1.1em
+  }
+  #river_timeline CITE {
+    font-size: 0.9em
+  }
+  #river_timeline tr > td:first-child {
+    font-size: 1.0em
   }
   #river_timeline tr > td:first-child {
     width: 6em;
-    text-align: right;
+    text-align: right
   }
   #river_timeline tr > td:first-child + td {
     padding-left: 1.5em;
     text-indent: -1em
   }
   #river_timeline td {
-    padding-bottom: 0.4em;
+    padding-bottom: 0.5em;
   }
   #river_timeline H2 {
-    padding: 1.5em 0 1em;
+    padding: 1.5em 0 1em
   }
   #river_sponsors_hiring #hiring {
     margin-top: 2em;
@@ -763,13 +767,11 @@
     margin-top: 1em
   }
   #river_sponsors_hiring H2 {
-    padding-top: 1.5em;
+    padding-top: 1.5em
   }
   #river_sponsors_hiring #hiring H2 {
-    padding-top: 0.7em;
+    padding-top: 0.7em
   }
-  /* lb */
-  
   #lb_maincol {
     float: left;
     width: 64%;
@@ -783,7 +785,7 @@
   #lb_rightcol #hiring {
     margin-top: 2em;
   }
-  #lb_rightcol #sponsors {
+  #lb_rightcol #sponsorposts {
     margin-top: 2em;
   }
   .lbtable {
@@ -811,93 +813,113 @@
     color: #455;
     font-size: 1.08em;
   }
-  /* share */
-  
-  #topcol23 .ii {
+  #sponsorposts .ii {
     padding-top: 0.5em
   }
-  /* to match padding under cite from shrtbl where there is no shrtbl */
-  
-  #topcol23 H2 {
-    padding-bottom: 0.7em
-  }
-  /* due to padding from sharetable */
-  
   .shrtbl {
-    width: 100%;
+    width: 100%
   }
   .shrtbl tr > td:first-child {
-    vertical-align: middle;
+    vertical-align: middle
   }
   .shrtbl tr > td:first-child + td {
     text-align: right;
     white-space: nowrap;
     min-width: 124px;
     vertical-align: middle;
+    padding-bottom: 2px
   }
   .shrtbl tr > td:first-child + td a {
-    text-decoration: none !important;
+    text-decoration: none !important
   }
   .shrtbl td {
-    height: 26px;
+    height: 26px
   }
   .shrpml {
     float: right;
-    width: 31px;
+    width: 32px
   }
   .shrpmlimg {
-    background: white url('http://www.techmeme.com/img/shr.png') no-repeat 0 0;
+    background: white url('/img/shr.png') no-repeat 0 0;
     width: 28px;
     height: 20px;
-    float: right;
+    float: right
   }
   .shrpmlimg:hover {
-    background: url('http://www.techmeme.com/img/shr.png') no-repeat 0 -20px !important;
+    background: url('/img/shr.png') no-repeat 0 -20px !important
   }
   .shrfb {
     float: right;
-    width: 52px;
+    width: 52px
   }
   .shrfbifr {
+    float: right;
     border: none;
     overflow: hidden;
     width: 48px;
-    height: 22px;
+    height: 20px
   }
   .shrrt {
     float: right;
-    width: 41px;
+    width: 37px
   }
   .shrrtimg {
-    background: white url('http://www.techmeme.com/img/shr.png') no-repeat -28px 0;
+    background: white url('/img/shr.png') no-repeat -28px 0;
     width: 37px;
     height: 20px;
-    float: right;
+    float: right
   }
   .shrrtimg:hover {
-    background: white url('http://www.techmeme.com/img/shr.png') no-repeat -28px -20px !important;
+    background: white url('/img/shr.png') no-repeat -28px -20px !important
   }
-  /* end share*/
-  
-  .maincol {
-    float: left;
-    width: 66%;
-    margin: 1em 1.9% 1em 0;
+  #newpostscounter {
+    display: none;
+    z-index: 0;
+    color: #679;
+    border: solid 1px #ccc;
+    text-align: center;
+    padding: 0.4em;
+    margin-right: 1px;
+    font-size: 0.9em;
+    font-weight: normal;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e4e4e4));
+    background: -moz-linear-gradient(top, #f4f4f4, #e4e4e4);
+    background-image: -o-linear-gradient(rgb(244, 244, 244), rgb(228, 228, 228));
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#e4e4e4')
   }
-  .rightcol {
-    float: right;
-    width: 31%;
-    margin-top: 2em
+  #newpostscounter:hover {
+    border-color: #679;
+    cursor: pointer
   }
-  .dt_pl_l {
-    padding: 0 0 1em;
-    color: #777;
+  #topcol3 {
+    position: relative !important
   }
-  .t2011 td {
-    padding-right: 0.5em;
+  #countercolspaceholder {
+    display: none
   }
-  .rightcol .item {
-    padding-left: 3em;
-    text-indent: -3em
+  .spaceholdertransitions {
+    -webkit-transition: height 0.4s ease;
+    -moz-transition-property: height;
+    -moz-transition-duration: 0.4s;
+    -o-transition-property: height;
+    -o-transition-duration: 0.4s
+  }
+  #countercol {
+    z-index: 10;
+    position: relative;
+    background-color: white;
+    top: 0
+  }
+  .countercoltransitions {
+    -webkit-transition: top 0.4s ease;
+    -moz-transition-property: top;
+    -moz-transition-duration: 0.4s;
+    -o-transition-property: top;
+    -o-transition-duration: 0.4s
+  }
+  .notransitions {
+    -webkit-transition-duration: 0s !important;
+    -moz-transition-duration: 0s !important;
+    -o-transition-duration: 0s !important
   }
 </style>
